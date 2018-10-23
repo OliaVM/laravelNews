@@ -1,4 +1,3 @@
-<!-- Show errors -->
 @if (count($errors) > 0)
   <div class="alert alert-danger">
     <ul>
@@ -7,9 +6,9 @@
       @endforeach
     </ul>
   </div>
-@endif	
+@endif  
 
-<form method="POST" ENCTYPE="multipart/form-data" accept-charset="UTF-8" action="{{ route('add_article') }}">
+<form method="POST" enctype="multipart/form-data" accept-charset="UTF-8" id="form" >
 	{{ csrf_field() }} 
 	Выберите название рубрики: 
 	<SELECT name = "rubric">
@@ -32,10 +31,13 @@
 	<textarea name="article_full_text" rows="10" cols="100" maxlength="5000" value=""></textarea>
 	<br>
 	Выберите картинку для загрузки: 
-	<input type="file" name="userfile" accept="image/*">
+	<input type="file" name="userfile" accept="image/*"> 
 	<br>
-	<input type="submit" name="go" value="загрузить на сервер">
+	<button type="submit">Добавить</button>
 </form>
 
-
+<div><span id='status'></span>&nbsp;
+	<span id='result_form'></span>&nbsp;
+	<span id='status_end'></span>
+</div>
 

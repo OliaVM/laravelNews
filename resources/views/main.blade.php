@@ -11,7 +11,9 @@
 		<!-- js Bootstrap -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
 		<!-- CSS -->
-		<link href="/style/messenger_style.css" rel="stylesheet" type="text/css"/>
+		<!--<link href="/style/style.css" rel="stylesheet" type="text/css"/>-->
+		<!-- js -->
+		<script src="{{asset('/js/my.js')}}"></script> 
     	<meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
 <body>

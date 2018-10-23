@@ -31,7 +31,7 @@ Route::get('/article/show/{number}', ['uses'=>'ArticlesController@show_article',
 
 //access only for authorized users
 Route::group(['middleware' => 'auth'], function () { 
-	
+
 	//add article
 	Route::match(['get', 'post'], '/article/add', ['uses'=>'ArticlesController@create_article', 'as'=>'add_article']);
 	
